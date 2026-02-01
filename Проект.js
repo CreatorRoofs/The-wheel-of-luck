@@ -12,7 +12,6 @@ const colors = [
 ];
 
 
-// Отрисовка списка с цветными точками
 function renderVariants() {
   itemsList.innerHTML = "";
 
@@ -48,7 +47,6 @@ function renderVariants() {
 }
 
 
-// Рисуем колесо (без изменений)
 function drawWheel() {
   if (variants.length === 0) {
     wheel.style.background = "#e5e7eb";
@@ -69,7 +67,6 @@ function drawWheel() {
 }
 
 
-// Добавление варианта
 function addVariant() {
   const value = input.value.trim();
   if (!value) return;
@@ -81,7 +78,6 @@ function addVariant() {
 }
 
 
-// Вращение
 function spin() {
   if (variants.length < 2) {
     resultDisplay.textContent = "Добавьте хотя бы 2 варианта!";
@@ -112,7 +108,7 @@ function spin() {
 }
 
 
-// События
+
 document.getElementById("addBtn").onclick = addVariant;
 
 input.addEventListener("keypress", e => {
@@ -129,7 +125,7 @@ document.getElementById("clearBtn").onclick = () => {
   resultDisplay.textContent = "Нажми «Крутить колесо!»";
 };
 
-// Инициализация
+
 let isSpinning = false;
 renderVariants();
 drawWheel();
